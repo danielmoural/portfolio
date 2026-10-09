@@ -24,7 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} antialiased`}>
+    <html
+      lang="en"
+      data-theme="catppuccin dark"
+      className={`${jetbrainsMono.variable} antialiased`}
+    >
       <body>
         <TooltipProvider>{children}</TooltipProvider>
       </body>
