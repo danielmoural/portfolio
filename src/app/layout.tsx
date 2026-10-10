@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { defaultMode, defaultTheme, toDataTheme } from "@/lib/themes";
 import "./globals.css";
 
 // @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-theme="catppuccin dark"
+      data-theme={toDataTheme(defaultTheme, defaultMode)}
       className={`${jetbrainsMono.variable} antialiased`}
     >
       <body>

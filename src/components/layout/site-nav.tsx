@@ -1,5 +1,6 @@
-import { GlobeIcon, MenuIcon } from "lucide-react";
+import { GlobeIcon } from "lucide-react";
 import Link from "next/link";
+import { ThemePicker } from "@/components/layout/theme-picker";
 import { Button } from "@/components/ui/button";
 
 const links = [
@@ -19,11 +20,9 @@ export function SiteNav() {
           </li>
         ))}
       </ul>
+      <ThemePicker />
       <Button variant="nav" size="bare" aria-label="Change language">
         <GlobeIcon />
-      </Button>
-      <Button variant="nav" size="bare" aria-label="Open menu">
-        <MenuIcon />
       </Button>
     </nav>
   );
