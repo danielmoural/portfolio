@@ -13,8 +13,8 @@ export function SiteNav() {
   const t = useTranslations("Nav");
 
   return (
-    <nav aria-label={t("label")} className="flex items-center">
-      <ul className="flex items-center gap-10 pr-10">
+    <nav aria-label={t("label")} className="flex gap-8">
+      <ul className="flex items-center gap-8">
         {links.map((link) => (
           <li key={link.href}>
             <Link href={link.href} className="hover:text-primary">
@@ -23,10 +23,8 @@ export function SiteNav() {
           </li>
         ))}
       </ul>
-      <div className="flex gap-4">
-        <ThemePicker />
-        <LanguageSelect />
-      </div>
+      <ThemePicker />
+      <LanguageSelect />
     </nav>
   );
 }
