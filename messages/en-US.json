@@ -6,7 +6,8 @@
     "label": "Main",
     "about": "About",
     "projects": "Projects",
-    "blog": "Blog"
+    "blog": "Blog",
+    "menu": "menu"
   },
   "ThemePicker": {
     "trigger": "Change theme",
