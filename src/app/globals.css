@@ -146,4 +146,15 @@ body {
   html {
     @apply font-sans;
   }
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Unlayered so it outranks the transition utilities baked into these components */
+[data-slot="select-item"],
+[data-slot="toggle-group-item"] {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: var(--default-transition-timing-function);
+  transition-duration: 200ms;
 }

@@ -1,9 +1,9 @@
 export const themes = [
   { value: "catppuccin", label: "Catppuccin" },
+  { value: "shadcn", label: "Shadcn" },
   { value: "dracula", label: "Dracula" },
   { value: "nord", label: "Nord" },
   { value: "gruvbox", label: "Gruvbox" },
-  { value: "radix", label: "Radix" },
 ] as const;
 
 export type Theme = (typeof themes)[number]["value"];

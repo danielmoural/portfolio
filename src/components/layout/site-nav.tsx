@@ -20,10 +20,7 @@ export function SiteNav() {
       <ul className="flex items-center gap-8 ">
         {links.map((link) => (
           <li key={link.href}>
-            <Link
-              href={link.href}
-              className="transition-colors duration-200 hover:text-primary"
-            >
+            <Link href={link.href} className="hover:text-primary">
               {t(link.key)}
             </Link>
           </li>
