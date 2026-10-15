@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Fragment } from "react";
 import {
   Breadcrumb,
@@ -10,6 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export function PathBreadcrumb() {
   const segments = usePathname().split("/").filter(Boolean);

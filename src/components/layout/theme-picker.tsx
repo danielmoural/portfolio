@@ -1,6 +1,7 @@
 "use client";
 
 import { MoonIcon, PaletteIcon, SunIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -29,6 +30,7 @@ const modeItemClassName =
   "has-data-[icon=inline-start]:pl-1 aria-pressed:border-muted-foreground aria-pressed:text-foreground";
 
 export function ThemePicker() {
+  const t = useTranslations("ThemePicker");
   const [theme, setTheme] = useState<Theme>(defaultTheme);
   const [mode, setMode] = useState<Mode>(defaultMode);
 
@@ -41,13 +43,13 @@ export function ThemePicker() {
   return (
     <Popover>
       <PopoverTrigger
-        render={<Button variant="nav" size="bare" aria-label="Change theme" />}
+        render={<Button variant="nav" size="bare" aria-label={t("trigger")} />}
       >
         <PaletteIcon />
       </PopoverTrigger>
       <PopoverContent align="end" sideOffset={12} className="w-auto gap-6">
         <ToggleGroup
-          aria-label="Mode"
+          aria-label={t("mode")}
           className={cn(groupClassName, "grid-cols-2")}
           value={[mode]}
           onValueChange={([value]) => value && apply(theme, value as Mode)}
@@ -57,18 +59,18 @@ export function ThemePicker() {
             className={cn(itemClassName, modeItemClassName)}
           >
             <SunIcon data-icon="inline-start" />
-            Light
+            {t("light")}
           </ToggleGroupItem>
           <ToggleGroupItem
             value="dark"
             className={cn(itemClassName, modeItemClassName)}
           >
             <MoonIcon data-icon="inline-start" />
-            Dark
+            {t("dark")}
           </ToggleGroupItem>
         </ToggleGroup>
         <ToggleGroup
-          aria-label="Theme"
+          aria-label={t("theme")}
           className={cn(groupClassName, "grid-cols-6")}
           value={[theme]}
           onValueChange={([value]) => value && apply(value, mode)}

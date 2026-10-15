@@ -1,0 +1,21 @@
+{
+  "Metadata": {
+    "description": "Portfólio"
+  },
+  "Nav": {
+    "label": "Principal",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "blog": "Blog"
+  },
+  "ThemePicker": {
+    "trigger": "Alterar tema",
+    "mode": "Modo",
+    "light": "Claro",
+    "dark": "Escuro",
+    "theme": "Tema"
+  },
+  "LanguageSelect": {
+    "label": "Idioma"
+  }
+}
