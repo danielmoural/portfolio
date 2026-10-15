@@ -13,11 +13,17 @@ export function SiteNav() {
   const t = useTranslations("Nav");
 
   return (
-    <nav aria-label={t("label")} className="flex gap-8">
-      <ul className="flex items-center gap-8">
+    <nav
+      aria-label={t("label")}
+      className="flex gap-8 [&>button]:transition-colors [&>button]:duration-200"
+    >
+      <ul className="flex items-center gap-8 ">
         {links.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className="hover:text-primary">
+            <Link
+              href={link.href}
+              className="transition-colors duration-200 hover:text-primary"
+            >
               {t(link.key)}
             </Link>
           </li>

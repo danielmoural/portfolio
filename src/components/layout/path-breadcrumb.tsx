@@ -19,7 +19,7 @@ export function PathBreadcrumb() {
         <BreadcrumbItem>
           <BreadcrumbLink
             render={<Link href="/" />}
-            className="text-primary hover:text-primary/40"
+            className="text-primary duration-200 hover:text-primary/40"
           >
             ~
           </BreadcrumbLink>
@@ -33,7 +33,7 @@ export function PathBreadcrumb() {
               <BreadcrumbItem>
                 <BreadcrumbLink
                   render={<Link href={href} />}
-                  className="hover:text-primary"
+                  className="duration-200 hover:text-primary"
                 >
                   {segment}
                 </BreadcrumbLink>
