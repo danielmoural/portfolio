@@ -1,6 +1,7 @@
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { Hero } from "@/components/home/hero";
 import { Timeline } from "@/components/home/timeline";
+import { ContentContainer } from "@/components/layout/content-container";
 import { Header } from "@/components/layout/header";
 import { PageContainer } from "@/components/layout/page-container";
 
@@ -13,9 +14,11 @@ export default function Home() {
   return (
     <PageContainer>
       <Header />
-      <Hero />
-      <FeaturedProjects />
-      <Timeline />
+      <ContentContainer>
+        <Hero />
+        <FeaturedProjects />
+        <Timeline />
+      </ContentContainer>
     </PageContainer>
   );
 }

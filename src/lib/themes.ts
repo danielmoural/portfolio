@@ -1,6 +1,6 @@
 export const themes = [
+  { value: "default", label: "Default" },
   { value: "catppuccin", label: "Catppuccin" },
-  { value: "shadcn", label: "Shadcn" },
   { value: "dracula", label: "Dracula" },
   { value: "nord", label: "Nord" },
   { value: "gruvbox", label: "Gruvbox" },
@@ -9,7 +9,7 @@ export const themes = [
 export type Theme = (typeof themes)[number]["value"];
 export type Mode = "light" | "dark";
 
-export const defaultTheme: Theme = "catppuccin";
+export const defaultTheme: Theme = "default";
 export const defaultMode: Mode = "dark";
 
 export function toDataTheme(theme: Theme, mode: Mode) {

@@ -1,3 +1,3 @@
 export function FeaturedProjects() {
-  return <section>FeaturedProjects</section>;
+  return <section id="projects">FeaturedProjects</section>;
 }

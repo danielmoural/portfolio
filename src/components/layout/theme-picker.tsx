@@ -3,6 +3,7 @@
 import { MoonIcon, PaletteIcon, SunIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { flushSync } from "react-dom";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -35,9 +36,24 @@ export function ThemePicker() {
   const [mode, setMode] = useState<Mode>(defaultMode);
 
   function apply(nextTheme: Theme, nextMode: Mode) {
-    setTheme(nextTheme);
-    setMode(nextMode);
-    document.documentElement.dataset.theme = toDataTheme(nextTheme, nextMode);
+    function update() {
+      // Synchronous so the picker's pressed state lands in the same snapshot
+      flushSync(() => {
+        setTheme(nextTheme);
+        setMode(nextMode);
+      });
+      document.documentElement.dataset.theme = toDataTheme(nextTheme, nextMode);
+    }
+
+    // Cross-fades the whole page at once instead of each element on its own
+    if (
+      !document.startViewTransition ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      update();
+      return;
+    }
+    document.startViewTransition(update);
   }
 
   return (
