@@ -7,7 +7,7 @@ export function ContentContainer({
   return (
     <div
       className={cn(
-        "mx-auto flex w-full flex-col gap-16 lg:w-[60vw]",
+        "mx-auto flex w-full flex-col gap-24 lg:w-[60vw]",
         className,
       )}
       {...props}
