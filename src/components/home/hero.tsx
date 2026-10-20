@@ -1,8 +1,7 @@
-import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { ExternalLink } from "@/components/home/external-link";
 import { Tilt } from "@/components/home/tilt";
-import { buttonVariants } from "@/components/ui/button";
 
 const email = "contact@danielmoura.dev";
 
@@ -23,7 +22,7 @@ export function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section id="about" className="flex flex-col gap-8 py-6 text-justify">
+    <section id="about" className="flex flex-col gap-8 text-justify">
       <div className="flex flex-col-reverse items-center gap-12 md:flex-row">
         <div className="flex flex-1 flex-col gap-8">
           <h1 className="font-bold text-4xl text-primary">Daniel Moura</h1>
@@ -52,20 +51,7 @@ export function Hero() {
         <p>{t("findMe")}</p>
         <div className="flex gap-3">
           {socials.map(({ label, href, icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonVariants({
-                variant: "link",
-                size: "bare",
-                // Bottom border instead of text-decoration so the line also
-                // runs under the icon; muted, brightening to primary on hover
-                className:
-                  "gap-1.5 rounded-none pb-0.5 border-primary/40! border-b duration-300 hover:border-primary! hover:no-underline!",
-              })}
-            >
+            <ExternalLink key={label} href={href}>
               {/* Masked so the logo follows the link's text color, hover included */}
               <span
                 aria-hidden="true"
@@ -73,11 +59,7 @@ export function Hero() {
                 style={{ maskImage: `url(/icons/${icon}-black.svg)` }}
               />
               {label}
-              <ArrowUpRightIcon
-                aria-hidden="true"
-                className="-ml-0.5 size-3.5"
-              />
-            </a>
+            </ExternalLink>
           ))}
         </div>
         <p>{t("mailMe", { email })}</p>

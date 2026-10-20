@@ -24,5 +24,23 @@
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
     "findMe": "Me encontre no",
     "mailMe": "Ou me mande um e-mail em {email}"
+  },
+  "FeaturedProjects": {
+    "title": "Projetos em destaque",
+    "allProjects": "Todos os projetos",
+    "technologies": "Tecnologias",
+    "builtWith": "Feito com",
+    "others": "{count, plural, one {# outra pessoa} other {# outras pessoas}}",
+    "projects": {
+      "portfolio": {
+        "description": "Site pessoal com apresentação, projetos em destaque e uma linha do tempo da carreira, disponível em quatro idiomas e cinco temas de cores."
+      },
+      "placeholderTeam": {
+        "description": "[Uma frase sobre o que o projeto faz.] <highlight>Eu [desenvolvi o … e o …].</highlight>"
+      },
+      "placeholderSolo": {
+        "description": "[Uma ou duas frases sobre o que o projeto faz e o problema que resolve.]"
+      }
+    }
   }
 }
