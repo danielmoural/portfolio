@@ -42,5 +42,8 @@
         "description": "[Une ou deux phrases sur ce que fait le projet et le problème qu'il résout.]"
       }
     }
+  },
+  "Footer": {
+    "email": "E-mail"
   }
 }

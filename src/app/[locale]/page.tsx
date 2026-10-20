@@ -1,7 +1,7 @@
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { Hero } from "@/components/home/hero";
-import { Timeline } from "@/components/home/timeline";
 import { ContentContainer } from "@/components/layout/content-container";
+import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { PageContainer } from "@/components/layout/page-container";
 
@@ -17,8 +17,8 @@ export default function Home() {
       <ContentContainer>
         <Hero />
         <FeaturedProjects />
-        <Timeline />
       </ContentContainer>
+      <Footer />
     </PageContainer>
   );
 }
