@@ -20,9 +20,17 @@ export function MobileMenu({ label, links }: MobileMenuProps) {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger
-        render={<Button variant="nav" size="bare" className="sm:hidden" />}
+        render={
+          <Button
+            variant="nav"
+            size="bare"
+            aria-label={label}
+            className="sm:hidden"
+          />
+        }
       >
-        [{label}]
+        {/* Shell command instead of a word, so it isn't translated */}
+        [cd]
       </PopoverTrigger>
       <PopoverContent
         align="end"
@@ -35,11 +43,9 @@ export function MobileMenu({ label, links }: MobileMenuProps) {
               <Link
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="flex gap-2 rounded-sm px-2 py-1.5 hover:text-primary"
+                className="flex gap-0.5 rounded-sm px-2 py-1.5 hover:text-primary"
               >
-                <span aria-hidden="true" className="text-primary">
-                  &gt;
-                </span>
+                <span aria-hidden="true">/</span>
                 {link.label}
               </Link>
             </li>
