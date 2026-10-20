@@ -45,5 +45,8 @@
   },
   "Footer": {
     "email": "Correo electrónico"
+  },
+  "BackToTop": {
+    "label": "Volver arriba"
   }
 }
