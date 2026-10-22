@@ -1,3 +1,3 @@
 export function Timeline() {
-  return <section>Timeline</section>;
+  return <section id="experience">Timeline</section>;
 }

@@ -5,9 +5,9 @@ import { ThemePicker } from "@/components/layout/theme-picker";
 import { Link } from "@/i18n/navigation";
 
 const links = [
-  { href: "/about", key: "about" },
-  { href: "/projects", key: "projects" },
-  { href: "/blog", key: "blog" },
+  { href: "/#about", key: "about" },
+  { href: "/#projects", key: "projects" },
+  { href: "/#experience", key: "experience" },
 ] as const;
 
 export function SiteNav() {

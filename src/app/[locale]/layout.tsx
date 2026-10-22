@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -13,8 +13,8 @@ import "../globals.css";
 // See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
 export const instant = false;
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -50,7 +50,9 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       data-theme={toDataTheme(defaultTheme, defaultMode)}
-      className={`${jetbrainsMono.variable} antialiased`}
+      // Lets Next.js skip smooth scrolling on route changes, keeping it for anchors
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} antialiased motion-safe:scroll-smooth`}
     >
       <body>
         <NextIntlClientProvider>

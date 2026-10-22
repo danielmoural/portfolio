@@ -6,7 +6,7 @@ export function PageContainer({
 }: React.ComponentProps<"main">) {
   return (
     <main
-      className={cn("mx-auto flex w-[90%] flex-col md:w-[70%]", className)}
+      className={cn("mx-auto flex w-[90%] flex-col", className)}
       {...props}
     />
   );

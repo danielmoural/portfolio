@@ -8,9 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-jetbrains-mono);
-  --font-mono: var(--font-jetbrains-mono);
-  --font-heading: var(--font-jetbrains-mono);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-inter);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -47,19 +46,6 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  --animate-blink: blink 4s ease-in-out infinite;
-
-  @keyframes blink {
-    0%,
-    35%,
-    65%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
 }
 
 body {
@@ -142,6 +128,12 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    /* Mixed from the foreground so the dots stay equally subtle on every theme */
+    background-image: radial-gradient(
+      color-mix(in oklab, var(--foreground) 20%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
   }
   html {
     @apply font-sans;
@@ -149,6 +141,13 @@ body {
   a {
     @apply transition-colors duration-200;
   }
+}
+
+/* Theme changes from the theme picker cross-fade the whole page */
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 300ms;
+  animation-timing-function: var(--default-transition-timing-function);
 }
 
 /* Unlayered so it outranks the transition utilities baked into these components */

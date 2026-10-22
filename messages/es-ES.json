@@ -6,7 +6,7 @@
     "label": "Principal",
     "about": "Sobre mí",
     "projects": "Proyectos",
-    "blog": "Blog",
+    "experience": "Experiencia",
     "menu": "menú"
   },
   "ThemePicker": {
@@ -18,5 +18,11 @@
   },
   "LanguageSelect": {
     "label": "Idioma"
+  },
+  "Hero": {
+    "intro": "¡Hola! Soy Daniel Moura, un <highlight>ingeniero de software semi-senior</highlight> actualmente enfocado en <highlight>desarrollo web full stack</highlight>.",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "findMe": "Encuéntrame en",
+    "mailMe": "O escríbeme a {email}"
   }
 }

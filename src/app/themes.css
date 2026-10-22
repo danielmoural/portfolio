@@ -10,74 +10,74 @@
  *   :root[data-theme~="x"][data-theme~="dark"]  -> specificity (0,3,0)
  */
 
-/* Shadcn: shadcn/ui Neutral */
+/* Default: antfu.me grayscale, callout colors as charts */
 
-:root[data-theme~="shadcn"] {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+:root[data-theme~="default"] {
+  --background: #fff;
+  --foreground: #555;
+  --card: #fff;
+  --card-foreground: #555;
+  --popover: #fff;
+  --popover-foreground: #555;
+  --primary: #000;
+  --primary-foreground: #fff;
+  --secondary: #f7f7f7;
+  --secondary-foreground: #222;
+  --muted: #f7f7f7;
+  --muted-foreground: #888;
+  --accent: #f7f7f7;
+  --accent-foreground: #222;
+  --destructive: #d1242f;
+  --border: #8882;
+  --input: #8884;
+  --ring: #888;
+  --chart-1: #0969da;
+  --chart-2: #1a7f37;
+  --chart-3: #9a6700;
+  --chart-4: #bc4c00;
+  --chart-5: #8250df;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #555;
+  --sidebar-primary: #000;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: #f7f7f7;
+  --sidebar-accent-foreground: #222;
+  --sidebar-border: #8882;
+  --sidebar-ring: #888;
 }
 
-:root[data-theme~="shadcn"][data-theme~="dark"] {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+:root[data-theme~="default"][data-theme~="dark"] {
+  --background: #050505;
+  --foreground: #bbb;
+  --card: #0e0e0e;
+  --card-foreground: #bbb;
+  --popover: #0e0e0e;
+  --popover-foreground: #bbb;
+  --primary: #fff;
+  --primary-foreground: #050505;
+  --secondary: #181818;
+  --secondary-foreground: #ddd;
+  --muted: #181818;
+  --muted-foreground: #888;
+  --accent: #181818;
+  --accent-foreground: #ddd;
+  --destructive: #f85149;
+  --border: #8882;
+  --input: #8884;
+  --ring: #888;
+  --chart-1: #2f81f7;
+  --chart-2: #3fb950;
+  --chart-3: #d29922;
+  --chart-4: #db6d28;
+  --chart-5: #a371f7;
+  --sidebar: #0e0e0e;
+  --sidebar-foreground: #bbb;
+  --sidebar-primary: #fff;
+  --sidebar-primary-foreground: #050505;
+  --sidebar-accent: #181818;
+  --sidebar-accent-foreground: #ddd;
+  --sidebar-border: #8882;
+  --sidebar-ring: #888;
 }
 
 /* Catppuccin: Latte / Mocha */
