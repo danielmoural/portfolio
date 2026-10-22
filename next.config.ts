@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: process.env.ALLOWED_DEV_ORIGINS?.split(",")
     .map((origin) => origin.trim())
     .filter(Boolean),
+  experimental: {
+    agentUpgrade: "security",
+  },
 };
 
 export default withNextIntl(nextConfig);
