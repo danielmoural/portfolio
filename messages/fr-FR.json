@@ -20,9 +20,7 @@
   },
   "Hero": {
     "intro": "Salut ! Je suis Daniel Moura, un <highlight>ingénieur logiciel confirmé</highlight> actuellement spécialisé en <highlight>développement web full stack</highlight>.",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    "findMe": "Retrouvez-moi sur",
-    "mailMe": "Ou écrivez-moi à {email}"
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
   },
   "FeaturedProjects": {
     "title": "Projets phares",
@@ -43,7 +41,7 @@
       }
     }
   },
-  "Footer": {
+  "SocialLinks": {
     "email": "E-mail"
   },
   "BackToTop": {
@@ -52,5 +50,11 @@
   "About": {
     "title": "À propos de moi",
     "placeholder": "Bientôt disponible."
+  },
+  "LocationCard": {
+    "basedIn": "Actuellement basé à",
+    "loading": "Chargement de la carte…",
+    "localTime": "Heure locale",
+    "recenter": "Recentrer la carte"
   }
 }

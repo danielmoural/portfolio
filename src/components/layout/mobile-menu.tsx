@@ -43,7 +43,7 @@ export function MobileMenu({ label, links }: MobileMenuProps) {
               <Link
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="flex gap-0.5 rounded-sm px-2 py-1.5 hover:text-primary"
+                className="flex gap-0.5 rounded-sm px-2 py-1.5 font-medium hover:text-primary"
               >
                 <span aria-hidden="true">/</span>
                 {link.label}

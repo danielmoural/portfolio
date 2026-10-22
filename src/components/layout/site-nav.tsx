@@ -21,7 +21,7 @@ export function SiteNav() {
       <ul className="hidden items-center gap-8 sm:flex">
         {navLinks.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className="hover:text-primary">
+            <Link href={link.href} className="font-medium hover:text-primary">
               {t(link.key)}
             </Link>
           </li>

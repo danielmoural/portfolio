@@ -1,11 +1,6 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ExternalLink } from "@/components/home/external-link";
-import { Tilt } from "@/components/home/tilt";
-import { SocialIcon } from "@/components/social-icon";
-import { email, github, linkedin } from "@/constants/contact";
-
-const socials = [linkedin, github];
+import { LocationCard } from "@/components/home/location-card";
+import { SocialLinks } from "@/components/social-links";
 
 export function Hero() {
   const t = useTranslations("Hero");
@@ -16,9 +11,18 @@ export function Hero() {
       className="flex flex-col-reverse items-center gap-12 text-justify md:flex-row md:items-start"
     >
       {/* Text boxes trimmed to cap height and baseline, so line-height adds
-          nothing to the gaps and the name's letters start at the photo's top */}
+          nothing to the gaps */}
       <div className="flex flex-1 flex-col gap-12 [&_:is(h1,p)]:[text-box:trim-both_cap_alphabetic]">
-        <h1 className="font-bold text-4xl text-primary">Daniel Moura</h1>
+        {/* Icons sit on the name's baseline, about as tall as its lowercase
+            letters, so they line up with the bulk of the name rather than
+            its capitals */}
+        <div className="flex items-baseline gap-6">
+          <h1 className="font-bold text-4xl text-primary">Daniel Moura</h1>
+          <SocialLinks
+            className="text-muted-foreground"
+            iconClassName="size-5"
+          />
+        </div>
         <div className="flex flex-col gap-8">
           <p>
             {t.rich("intro", {
@@ -28,31 +32,13 @@ export function Hero() {
             })}
           </p>
           <p>{t("bio")}</p>
-          <div className="flex flex-col gap-3">
-            <p>{t("findMe")}</p>
-            <div className="flex gap-3">
-              {socials.map(({ label, href, icon }) => (
-                <ExternalLink key={label} href={href}>
-                  <SocialIcon icon={icon} />
-                  {label}
-                </ExternalLink>
-              ))}
-            </div>
-            <p>{t("mailMe", { email })}</p>
-          </div>
         </div>
       </div>
-      <Tilt className="relative size-48 shrink-0 overflow-hidden rounded-full shadow-2xl shadow-black/45 md:size-64">
-        {/* Hairline drawn over the photo's own edge, separating it from the dot pattern */}
-        <Image
-          src="/profile-picture.jpeg"
-          alt="Daniel Moura"
-          fill
-          priority
-          sizes="(min-width: 768px) 16rem, 12rem"
-          className="rounded-full object-cover object-[46%_50%] outline-2 -outline-offset-2 outline-foreground/10"
-        />
-      </Tilt>
+      <LocationCard
+        // CARTO's basemap keys are meant for the browser; restrict it by domain
+        apiKey={process.env.CARTO_API_KEY ?? ""}
+        className="w-full shrink-0 md:w-72"
+      />
     </section>
   );
 }

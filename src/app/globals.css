@@ -46,19 +46,6 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  --animate-blink: blink 6s ease-in-out infinite;
-
-  @keyframes blink {
-    0%,
-    40%,
-    60%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
 }
 
 body {
@@ -161,6 +148,95 @@ body {
 ::view-transition-new(*) {
   animation-duration: 300ms;
   animation-timing-function: var(--default-transition-timing-function);
+}
+
+/* MapLibre's defaults restyled with the theme's tokens; selectors doubled up
+   since its stylesheet loads after this one */
+.maplibregl-map.maplibregl-map {
+  font-family: var(--font-sans);
+}
+
+.maplibregl-ctrl.maplibregl-ctrl.maplibregl-ctrl-attrib {
+  background: color-mix(in oklab, var(--card) 80%, transparent);
+  color: var(--muted-foreground);
+  font-size: 0.625rem;
+  line-height: 1rem;
+}
+
+.maplibregl-ctrl-attrib.maplibregl-ctrl a {
+  color: inherit;
+}
+
+/* MapLibre's own info icon, masked so it takes the theme's color instead of
+   its hard-coded black */
+.maplibregl-ctrl.maplibregl-ctrl-attrib
+.maplibregl-ctrl-attrib-button.maplibregl-ctrl-attrib-button {
+  background: var(--muted-foreground);
+  mask:
+    url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E %3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E %3C/svg%3E")
+    center / 100% no-repeat;
+  transition: background-color 200ms var(--default-transition-timing-function);
+}
+
+.maplibregl-ctrl.maplibregl-ctrl-attrib
+  .maplibregl-ctrl-attrib-button.maplibregl-ctrl-attrib-button:hover {
+  background: var(--primary);
+}
+
+/* The credit unfolds leftward out of its info button. Keyframes since
+   MapLibre only toggles a class, flipping the text's display, which a
+   transition can't follow */
+@media (prefers-reduced-motion: no-preference) {
+  .maplibregl-ctrl-attrib.maplibregl-compact-show {
+    animation: attribution-unfold 300ms
+      var(--default-transition-timing-function);
+  }
+
+  .maplibregl-compact-show .maplibregl-ctrl-attrib-inner {
+    animation: attribution-fade 300ms ease-out;
+  }
+
+  /* Folding back, while `foldAttributionOnClose` holds it open; held on the
+     last frame until it's closed for real */
+  .maplibregl-ctrl-attrib.maplibregl-compact-show.attribution-closing {
+    animation: attribution-fold 300ms var(--default-transition-timing-function)
+      forwards;
+  }
+
+  .maplibregl-compact-show.attribution-closing .maplibregl-ctrl-attrib-inner {
+    animation: attribution-fade-out 300ms ease-in forwards;
+  }
+}
+
+/* Starts clipped to the button's 24px circle at the right edge */
+@keyframes attribution-unfold {
+  from {
+    clip-path: inset(0 0 0 calc(100% - 24px) round 12px);
+  }
+  to {
+    clip-path: inset(0 round 12px);
+  }
+}
+
+@keyframes attribution-fold {
+  from {
+    clip-path: inset(0 round 12px);
+  }
+  to {
+    clip-path: inset(0 0 0 calc(100% - 24px) round 12px);
+  }
+}
+
+@keyframes attribution-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes attribution-fade-out {
+  to {
+    opacity: 0;
+  }
 }
 
 /* Unlayered so it outranks the transition utilities baked into these components */
