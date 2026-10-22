@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { defaultMode, defaultTheme } from "@/constants/themes";
 import { routing } from "@/i18n/routing";
-import { defaultMode, defaultTheme, toDataTheme } from "@/lib/themes";
+import { toDataTheme } from "@/lib/themes";
 import "../globals.css";
 
 // @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.

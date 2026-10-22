@@ -11,15 +11,10 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import {
-  defaultMode,
-  defaultTheme,
-  type Mode,
-  type Theme,
-  themes,
-  toDataTheme,
-} from "@/lib/themes";
+import { defaultMode, defaultTheme, themes } from "@/constants/themes";
+import { toDataTheme } from "@/lib/themes";
 import { cn } from "@/lib/utils";
+import type { Mode, Theme } from "@/types/theme";
 
 const groupClassName =
   "grid w-full [--item-radius:var(--radius-sm)] [--padding:--spacing(1)] [--border-width:1px] p-(--padding) border-(length:--border-width) border-input rounded-[calc(var(--item-radius)+var(--padding)+var(--border-width))]";

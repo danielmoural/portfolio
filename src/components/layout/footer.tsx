@@ -1,9 +1,11 @@
 import { MailIcon } from "lucide-react";
 import { cacheLife } from "next/cache";
 import { useTranslations } from "next-intl";
+import { contentWidthClassName } from "@/components/layout/content-container";
 import { SocialIcon } from "@/components/social-icon";
 import { buttonVariants } from "@/components/ui/button";
-import { email, github, linkedin } from "@/lib/contact";
+import { email, github, linkedin } from "@/constants/contact";
+import { cn } from "@/lib/utils";
 
 const linkClassName = buttonVariants({ variant: "nav", size: "bare" });
 
@@ -18,7 +20,12 @@ export function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="flex items-center justify-between pb-8 text-muted-foreground text-sm">
+    <footer
+      className={cn(
+        contentWidthClassName,
+        "flex items-center justify-between pb-8 text-muted-foreground text-sm",
+      )}
+    >
       <p>
         © <CurrentYear /> Daniel Moura
       </p>

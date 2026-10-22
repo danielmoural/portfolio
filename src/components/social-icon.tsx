@@ -1,10 +1,11 @@
 import { cn } from "@/lib/utils";
+import type { SocialIconName } from "@/types/social";
 
 export function SocialIcon({
   icon,
   className,
 }: {
-  icon: "github" | "linkedin";
+  icon: SocialIconName;
   className?: string;
 }) {
   return (

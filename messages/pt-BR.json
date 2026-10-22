@@ -6,7 +6,6 @@
     "label": "Principal",
     "about": "Sobre",
     "projects": "Projetos",
-    "experience": "Experiência",
     "menu": "menu"
   },
   "ThemePicker": {
@@ -28,6 +27,7 @@
   "FeaturedProjects": {
     "title": "Projetos em destaque",
     "allProjects": "Todos os projetos",
+    "allProjectsSubtitle": "Meus projetos públicos, de projetos pessoais a trabalhos em equipe, do mais recente ao mais antigo.",
     "technologies": "Tecnologias",
     "builtWith": "Feito com",
     "others": "{count, plural, one {# outra pessoa} other {# outras pessoas}}",
@@ -48,5 +48,9 @@
   },
   "BackToTop": {
     "label": "Voltar ao topo"
+  },
+  "About": {
+    "title": "Sobre mim",
+    "placeholder": "Em breve."
   }
 }

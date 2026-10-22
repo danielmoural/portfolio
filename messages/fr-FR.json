@@ -6,7 +6,6 @@
     "label": "Principal",
     "about": "À propos",
     "projects": "Projets",
-    "experience": "Expérience",
     "menu": "menu"
   },
   "ThemePicker": {
@@ -28,6 +27,7 @@
   "FeaturedProjects": {
     "title": "Projets phares",
     "allProjects": "Tous les projets",
+    "allProjectsSubtitle": "Mes projets publics, des projets personnels au travail en équipe, du plus récent au plus ancien.",
     "technologies": "Technologies",
     "builtWith": "Réalisé avec",
     "others": "{count, plural, one {# autre personne} other {# autres personnes}}",
@@ -48,5 +48,9 @@
   },
   "BackToTop": {
     "label": "Retour en haut"
+  },
+  "About": {
+    "title": "À propos de moi",
+    "placeholder": "Bientôt disponible."
   }
 }

@@ -6,7 +6,6 @@
     "label": "Main",
     "about": "About",
     "projects": "Projects",
-    "experience": "Experience",
     "menu": "menu"
   },
   "ThemePicker": {
@@ -28,6 +27,7 @@
   "FeaturedProjects": {
     "title": "Featured projects",
     "allProjects": "All projects",
+    "allProjectsSubtitle": "My public work, from side projects to team efforts, newest first.",
     "technologies": "Technologies",
     "builtWith": "Built with",
     "others": "{count, plural, one {# other} other {# others}}",
@@ -48,5 +48,9 @@
   },
   "BackToTop": {
     "label": "Back to top"
+  },
+  "About": {
+    "title": "About me",
+    "placeholder": "Coming soon."
   }
 }

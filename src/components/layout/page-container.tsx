@@ -6,7 +6,10 @@ export function PageContainer({
 }: React.ComponentProps<"main">) {
   return (
     <main
-      className={cn("mx-auto flex w-[90%] flex-col gap-24", className)}
+      className={cn(
+        "mx-auto flex min-h-svh w-[90%] flex-col gap-24",
+        className,
+      )}
       {...props}
     />
   );

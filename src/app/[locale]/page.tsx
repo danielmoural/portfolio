@@ -18,8 +18,8 @@ export default function Home() {
       <ContentContainer>
         <Hero />
         <FeaturedProjects />
-        <Footer />
       </ContentContainer>
+      <Footer />
       <BackToTop />
     </PageContainer>
   );
