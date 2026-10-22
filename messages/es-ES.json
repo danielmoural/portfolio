@@ -6,7 +6,6 @@
     "label": "Principal",
     "about": "Sobre mí",
     "projects": "Proyectos",
-    "experience": "Experiencia",
     "menu": "menú"
   },
   "ThemePicker": {
@@ -28,6 +27,7 @@
   "FeaturedProjects": {
     "title": "Proyectos destacados",
     "allProjects": "Todos los proyectos",
+    "allProjectsSubtitle": "Mis proyectos públicos, desde proyectos personales hasta trabajos en equipo, del más reciente al más antiguo.",
     "technologies": "Tecnologías",
     "builtWith": "Hecho con",
     "others": "{count, plural, one {# persona más} other {# personas más}}",
@@ -45,5 +45,12 @@
   },
   "Footer": {
     "email": "Correo electrónico"
+  },
+  "BackToTop": {
+    "label": "Volver arriba"
+  },
+  "About": {
+    "title": "Sobre mí",
+    "placeholder": "Próximamente."
   }
 }

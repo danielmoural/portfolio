@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { ExternalLink } from "@/components/home/external-link";
 import { Tilt } from "@/components/home/tilt";
 import { SocialIcon } from "@/components/social-icon";
-import { email, github, linkedin } from "@/lib/contact";
+import { email, github, linkedin } from "@/constants/contact";
 
 const socials = [linkedin, github];
 

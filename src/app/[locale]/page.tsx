@@ -1,5 +1,6 @@
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { Hero } from "@/components/home/hero";
+import { BackToTop } from "@/components/layout/back-to-top";
 import { ContentContainer } from "@/components/layout/content-container";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
@@ -19,6 +20,7 @@ export default function Home() {
         <FeaturedProjects />
       </ContentContainer>
       <Footer />
+      <BackToTop />
     </PageContainer>
   );
 }
