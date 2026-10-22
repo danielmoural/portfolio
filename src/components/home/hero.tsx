@@ -2,21 +2,10 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ExternalLink } from "@/components/home/external-link";
 import { Tilt } from "@/components/home/tilt";
+import { SocialIcon } from "@/components/social-icon";
+import { email, github, linkedin } from "@/lib/contact";
 
-const email = "contact@danielmoura.dev";
-
-const socials = [
-  {
-    label: "GitHub",
-    href: "https://github.com/danielmoural",
-    icon: "github",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/danielmoural",
-    icon: "linkedin",
-  },
-] as const;
+const socials = [linkedin, github];
 
 export function Hero() {
   const t = useTranslations("Hero");
@@ -44,12 +33,7 @@ export function Hero() {
             <div className="flex gap-3">
               {socials.map(({ label, href, icon }) => (
                 <ExternalLink key={label} href={href}>
-                  {/* Masked so the logo follows the link's text color, hover included */}
-                  <span
-                    aria-hidden="true"
-                    className="size-4 bg-current mask-contain mask-center mask-no-repeat"
-                    style={{ maskImage: `url(/icons/${icon}-black.svg)` }}
-                  />
+                  <SocialIcon icon={icon} />
                   {label}
                 </ExternalLink>
               ))}
