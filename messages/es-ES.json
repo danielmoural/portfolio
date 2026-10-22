@@ -1,0 +1,56 @@
+{
+  "Metadata": {
+    "description": "Portafolio"
+  },
+  "Nav": {
+    "label": "Principal",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "menu": "menú"
+  },
+  "ThemePicker": {
+    "trigger": "Cambiar tema",
+    "mode": "Modo",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "theme": "Tema"
+  },
+  "LanguageSelect": {
+    "label": "Idioma"
+  },
+  "Hero": {
+    "intro": "¡Hola! Soy Daniel Moura, un <highlight>ingeniero de software semi-senior</highlight> actualmente enfocado en <highlight>desarrollo web full stack</highlight>.",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "findMe": "Encuéntrame en",
+    "mailMe": "O escríbeme a {email}"
+  },
+  "FeaturedProjects": {
+    "title": "Proyectos destacados",
+    "allProjects": "Todos los proyectos",
+    "allProjectsSubtitle": "Mis proyectos públicos, desde proyectos personales hasta trabajos en equipo, del más reciente al más antiguo.",
+    "technologies": "Tecnologías",
+    "builtWith": "Hecho con",
+    "others": "{count, plural, one {# persona más} other {# personas más}}",
+    "projects": {
+      "portfolio": {
+        "description": "Sitio personal con una presentación, proyectos destacados y una línea de tiempo profesional, disponible en cuatro idiomas y cinco temas de color."
+      },
+      "placeholderTeam": {
+        "description": "[Una frase sobre lo que hace el proyecto.] <highlight>Yo [desarrollé el … y el …].</highlight>"
+      },
+      "placeholderSolo": {
+        "description": "[Una o dos frases sobre lo que hace el proyecto y el problema que resuelve.]"
+      }
+    }
+  },
+  "Footer": {
+    "email": "Correo electrónico"
+  },
+  "BackToTop": {
+    "label": "Volver arriba"
+  },
+  "About": {
+    "title": "Sobre mí",
+    "placeholder": "Próximamente."
+  }
+}
