@@ -6,7 +6,10 @@ export function ContentContainer({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("mx-auto flex w-full flex-col lg:w-[60vw]", className)}
+      className={cn(
+        "mx-auto flex w-full flex-col gap-24 lg:w-[60vw]",
+        className,
+      )}
       {...props}
     />
   );
